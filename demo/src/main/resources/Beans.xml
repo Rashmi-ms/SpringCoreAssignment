@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+        <!-- <bean id="address" class="com.spring.assignment.Address">
+        <property name="street" value="2nd street"></property>
+        <property name="city" value="Banglore"></property>
+        <property name="state" value="Karnataka"></property>
+        <property name="country" value="India"></property>
+        </bean>
+        <bean id="customer" class="com.spring.assignment.Customer">
+        <property name="customerId" value="1"></property>
+        <property name="customerName" value="Rashmi"></property>
+        <property name="customerAddress" ref="address"></property>
+        </bean> -->
+        <bean id="address" class="com.spring.assignment.Address">
+        <constructor-arg value="2nd street"></constructor-arg>  
+        <constructor-arg value="Banglore"></constructor-arg> 
+        <constructor-arg value="Karnataka"></constructor-arg> 
+        <constructor-arg value="India"></constructor-arg>  
+        
+        </bean>
+        <bean id="customer" class="com.spring.assignment.Customer">
+        <constructor-arg value="12" type="int"></constructor-arg>  
+        <constructor-arg value="Rashmi"></constructor-arg>  
+        <constructor-arg>  <ref bean="address"/>  </constructor-arg>
+        </bean>
+     </beans>
